@@ -11,7 +11,7 @@ import { useState, useEffect, useContext } from "react"
 import Loading from "./Loading"
 
 const SettingsMenu = () => {
-  const supabase = createSupabaseClient()
+  const supabase = createSupabaseClient
   const router = useRouter()
   const pathname = usePathname();
   const {loading, setLoading} = useContext(NotesContext);
