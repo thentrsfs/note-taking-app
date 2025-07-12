@@ -1,10 +1,11 @@
 // app/api/auth/callback/route.ts
-import { createSupabaseClient } from '@/app/lib/supabase/server';
-import prisma from '@/app/lib/prisma';
+import { createSupabaseClient } from '@/app/lib/supabase/server'
+import {PrismaClient} from '@prisma/client'
 import { NextResponse } from 'next/server';
 
 export async function POST() {
   const supabase = await createSupabaseClient();
+  const prisma = new PrismaClient();
   const { data: { user }, error } = await supabase.auth.getUser();
   if (error || !user) {
     return new NextResponse('Unauthorized', { status: 401 });

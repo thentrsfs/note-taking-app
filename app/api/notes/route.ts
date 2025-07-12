@@ -1,10 +1,11 @@
 import { NextResponse } from 'next/server';
-import prisma from '@/app/lib/prisma';
+import {PrismaClient} from '@prisma/client'
 import { createSupabaseClient } from '@/app/lib/supabase/server';
 
 
 export async function POST(req: Request) {
   const supabase = await createSupabaseClient();
+  const prisma = new PrismaClient();
   const {
     data: { user },
     error: authError,
@@ -49,6 +50,7 @@ export async function POST(req: Request) {
 
 export async function GET() {
   const supabase = await createSupabaseClient();
+    const prisma = new PrismaClient();
   const {
     data: { user },
     error: authError,
