@@ -1,11 +1,13 @@
 import { NextResponse } from 'next/server'
-import prisma from '@/app/lib/prisma'
+import { PrismaClient } from '@prisma/client';
 
 export async function GET(
   req: Request,
   context: { params: Promise<{ id: string }> }
 ) {
   const {id} = await context.params;
+
+  const prisma = new PrismaClient();
 
   const note = await prisma.note.findUnique({
     where: { id },
@@ -23,6 +25,7 @@ export async function PUT(
   context: { params: Promise<{ id: string }> }
 ) {
   const {id} = await context.params;
+   const prisma = new PrismaClient();
   const body = await req.json();
 
   const updated = await prisma.note.update({
@@ -44,6 +47,7 @@ export async function DELETE(
   context: { params: Promise<{ id: string }> }
 ) {
   const { id } = await context.params;
+   const prisma = new PrismaClient();
 
   await prisma.note.delete({
     where: { id },
