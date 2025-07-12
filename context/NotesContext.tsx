@@ -2,7 +2,6 @@
 
 import { createContext, useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { createSupabaseClient } from '@/app/lib/supabase/client';
 
 type Note = {
   id: string;

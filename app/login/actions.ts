@@ -2,7 +2,7 @@
 
 import { redirect } from 'next/navigation'
 import { createSupabaseClient } from '@/app/lib/supabase/server'
-import { supabaseAdmin } from '../lib/supabase/admin'
+import { supabaseAdmin } from '@/app/lib/supabase/admin'
 
 export async function login({email, password} : {email: string, password: string}): Promise<{error: string | null}> {
   const supabase = await createSupabaseClient()

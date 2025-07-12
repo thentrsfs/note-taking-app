@@ -8,7 +8,7 @@ import IconHidePassword from '@/components/ui/svg/IconHidePassword';
 import PrimaryButton from '@/components/ui/buttons/PrimaryButton';
 import { ToastContext } from '@/context/ToastContext';
 const ChangePassword = () => {
-  const supabase = createSupabaseClient();
+  const supabase = createSupabaseClient;
   const router = useRouter();
   const { setToastText, setToastVisible, } = useContext(ToastContext);
   const [newPassword, setNewPassword] = useState('');

@@ -11,7 +11,7 @@ import Loading from "@/components/ui/Loading"
 
 const ResetPassword = () => {
     const router = useRouter()
-    const supabase = createSupabaseClient()
+    const supabase = createSupabaseClient
     const [newPassword, setNewPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
     const [loading, setLoading] = useState(false)
