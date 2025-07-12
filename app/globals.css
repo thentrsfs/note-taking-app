@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+
+
+  /* Colors */
+  --color-neutral-950: #0E121B;
+  --color-neutral-900: #191B25;
+  --color-neutral-800: #232530;
+  --color-neutral-700: #2B303B;
+  --color-neutral-600: #525866;
+  --color-neutral-500: #717784;
+  --color-neutral-400: #99A0AE;
+  --color-neutral-300: #CACFD8;
+  --color-neutral-200: #E0E4EA;
+  --color-neutral-100: #F3F5F8;
+  --color-neutral-50: #F5F7FA;
+
+  --color-blue-700: #2547D0;
+  --color-blue-500: #335CFF;
+  --color-blue-50: #EBF1FF;
+
+  --color-green-500: #21C16B;
+  --color-green-100: #D1FBE9;
+
+  --color-red-500: #FB3748;
+  --color-red-100: #FFD5D8;
+
+}
+
+
+@layer components {
+  .text-preset-1 {
+    @apply text-2xl leading-[120%] tracking-[-0.5px] font-bold
+  }
+  .text-preset-2 {
+    @apply text-xl leading-[120%] tracking-[-0.5px] font-bold
+  }
+  .text-preset-3 {
+    @apply text-[16px] leading-[120%] tracking-[-0.3px] font-semibold
+  }
+  .text-preset-4 {
+    @apply text-sm leading-[120%] tracking-[-0.2px] font-medium
+  }
+  .text-preset-5 {
+    @apply text-sm leading-[120%] tracking-[-0.2px]
+  }
+  .text-preset-6 {
+    @apply text-xs leading-[120%] tracking-[-0.2px]
+  }
+}
+
+@layer utilities {
+   .font-inter {
+    font-family: var(--font-inter), sans-serif;
+  }
+  .font-noto {
+    font-family: var(--font-noto), serif;
+  }
+  .font-source {
+    font-family: var(--font-source), monospace;
+  }
+}
