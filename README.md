@@ -30,7 +30,7 @@ A fully functional and responsive note-taking web application built with **Next.
 
 | Home Page | Create Note | Dark Theme |
 |-----------|-------------|------------|
-| ![](/images/note-app-login-dark.png) | ![](/note-app-home-light.png) | ![](/note-app-home-dark.png) |
+| ![](/public/images/note-app-login-dark.png) | ![](/public/note-app-home-light.png) | ![](/public/note-app-home-dark.png) |
 
 ## 🧪 Functionality Overview
 
