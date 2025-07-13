@@ -54,7 +54,7 @@ const isLoginPage = pathname.startsWith('/login');
           <Suspense fallback={<Loading />}>
           {!isLoginPage && <Sidebar />}
           </Suspense>
-          <div className="flex flex-col w-full  bg-white lg:dark:bg-neutral-950">
+          <div className="flex flex-col w-full lg:bg-white bg-neutral-100 dark:bg-neutral-800 lg:dark:bg-neutral-950">
             {!isLoginPage && <Header searchInput={searchInput} handleInputChange={(e) => setSearchInput(e.target.value)} title={isArchivedPage ? 'Archived Notes' : isTagsPage ? 'Notes Tagged:' : 'All Notes'} tag={tag || ''} />}
             <main className={!isLoginPage ? 'rounded-t-xl flex min-h-screen max-lg:flex-col bg-white dark:bg-neutral-950 pb-12 p-4 md:p-8 lg:py-0 overflow-hidden transition-colors duration-300' : ''}>
               {!isLoginPage && (
