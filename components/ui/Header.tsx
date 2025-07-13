@@ -4,7 +4,7 @@ import IconSearch from "./svg/IconSearch"
 import Link from "next/link"
 const Header = ({title, tag, searchInput, handleInputChange} : {title: string, tag?: string, searchInput?: string, handleInputChange?: (e: React.ChangeEvent<HTMLInputElement>) => void}) => {
   return (
-    <header className="flex w-full lg:border-b-1 border-neutral-200 dark:border-neutral-800 flex-col py-3 px-4 md:px-8 md:py-4 lg:p-0 lg:bg-transparent bg-neutral-100 dark:lg:bg-neutral-950 dark:bg-neutral-800">
+    <header className="flex w-full lg:border-b-1 border-neutral-200 dark:border-neutral-800 flex-col py-3 px-4 md:px-8 md:py-4 lg:p-0 bg-neutral-100 lg:bg-white dark:lg:bg-neutral-950 dark:bg-neutral-800">
 <Logo className='dark:fill-white fill-neutral-950 lg:hidden'/>
 <div className="hidden lg:flex items-center justify-between md:px-8 md:py-4">
 <span className='text-preset-1 text-neutral-950 dark:text-white'>
