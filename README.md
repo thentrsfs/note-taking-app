@@ -28,9 +28,9 @@ A fully functional and responsive note-taking web application built with **Next.
 
 ## 📷 Screenshots
 
-| Home Page | Create Note | Dark Theme |
+| Login Page Dark | Home Page Dark | Home Page Light |
 |-----------|-------------|------------|
-| ![](/public/images/note-app-login-dark.png) | ![](/public/note-app-home-light.png) | ![](/public/note-app-home-dark.png) |
+| ![](/public/images/note-app-login-dark.png) | ![](/public/images/note-app-home-dark.png) | ![](/public/images/note-app-home-light.png) |
 
 ## 🧪 Functionality Overview
 
