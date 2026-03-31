@@ -27,11 +27,28 @@ export async function updateSession(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser()
 
-  if (!user && !request.nextUrl.pathname.startsWith('/login')) {
-    const url = request.nextUrl.clone()
-    url.pathname = '/login'
-    return NextResponse.redirect(url)
-  }
+  const pathname = request.nextUrl.pathname
+
+const protectedRoutes = ['/', '/create-note', '/search', '/notes', '/settings', '/note', '/archived']
+
+const isProtectedRoute = protectedRoutes.some((route) => {
+  // exact match for "/"
+  if (route === '/') return pathname === '/'
+  // prefix match for others
+  return pathname.startsWith(route)
+})
+
+// allow auth routes always
+const isAuthRoute = pathname.startsWith('/auth')
+
+// detect OAuth callback
+const hasCode = request.nextUrl.searchParams.has('code')
+
+if (!user && isProtectedRoute && !isAuthRoute && !hasCode) {
+  const url = request.nextUrl.clone()
+  url.pathname = '/login'
+  return NextResponse.redirect(url)
+}
 
   return response
 }
